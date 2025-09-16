@@ -5,9 +5,7 @@
 This tutorial demonstrates how to create a dynamic Excel invoice with:
 
 - Auto-calculation of totals and taxes
-- Quantity conversion from kg to pounds
-- Unit price auto-fill and total calculation per row
-- Dropdown lists for products sourced from another sheet
+- Quantity conversi products sourced from another sheet
 - Automation via macros (VBA)
 
 This project is ideal for beginners who want to create a functional invoice system in Excel.
@@ -18,7 +16,9 @@ This project is ideal for beginners who want to create a functional invoice syst
 2. Click **File → New → Blank Workbook**.
 3. Save it immediately:
    - File → Save As → Choose location → Name: `Invoice.xlsx`
-   - Save as type: Excel Workbook (*.xlsx)
+   - Save as type: Excel Workbook (*.xlsx)on from kg to pounds
+- Unit price auto-fill and total calculation per row
+- Dropdown lists for
    - Click Save
 
 You now have a blank Excel workbook to start building your invoice.
@@ -101,8 +101,6 @@ Open the VBA editor:
   - If Developer tab is not visible: File → Options → Customize Ribbon → Check Developer
 
 Paste the following code in Sheet1 (Invoice):
-
-```vba
 Private Sub Worksheet_Change(ByVal Target As Range)
     Dim rngM As Range, rngO As Range
     Dim row As Long
@@ -137,22 +135,21 @@ Private Sub Worksheet_Change(ByVal Target As Range)
 
     Application.EnableEvents = True
 End Sub
-Save the workbook as a macro-enabled file: .xlsm
+Save the Workbook
+Save the workbook as a Macro-Enabled Workbook (.xlsm) to ensure the VBA code runs.
 
 How to Use the Invoice
 Select a product from B19:B30 dropdown.
 
-Enter a quantity in M19:M30 (kg)
+Enter a quantity in M19:M30 (kg) — this auto-converts to pounds.
 
-Auto-converts to pounds
+Unit price in O is set to 4.49.
 
-Unit price in O is set to 4.49
+Total in P is calculated automatically.
 
-Total in P is calculated automatically
+Edit O19:O30 if needed — total recalculates automatically.
 
-Edit O19:O30 if needed — total recalculates automatically
-
-Subtotal, Tax, and Grand Total update automatically
+Subtotal, Tax, and Grand Total update automatically.
 
 Alternate Access Methods
 VBA Editor: Alt + F11 or Developer → Visual Basic
@@ -163,15 +160,13 @@ Data Validation: Data → Data Validation or Right-click → Format Cells → Da
 
 Visual Diagrams
 Sheet1 (Invoice)
-
 mathematica
 Copy code
 +---------+-------------------+------------+----------+
-| B19:B30 | Product Description | M19:M30  | Quantity |
-| O19:O30 | Unit Price         | P19:P30  | Total    |
+| B19:B30 | Product Description| M19:M30   | Quantity |
+| O19:O30 | Unit Price         | P19:P30   | Total    |
 +---------+-------------------+------------+----------+
 Sheet2 (Products)
-
 mathematica
 Copy code
 +---------+
@@ -181,19 +176,23 @@ Copy code
 | Product C|
 | Product D|
 +---------+
-#Notes / Tips for Beginners
-Enable macros for automation: click Enable Content when opening .xlsm file.
+Notes / Tips for Beginners
+Enable macros for automation: click Enable Content when opening the .xlsm file.
 
-Always save as Excel Macro-Enabled Workbook (.xlsm)
+Always save as Excel Macro-Enabled Workbook (.xlsm).
 
-Adding more products: Add items to Sheet2 and update named range (ProductsList)
+Adding more products: Add items to Sheet2 and update named range (ProductsList).
 
-Adding more rows: Extend invoice ranges in Sheet1 and update macro ranges (M19:M30, O19:O30, P19:P30)
+Adding more rows: Extend invoice ranges in Sheet1 and update macro ranges (M19:M30, O19:O30, P19:P30).
 
-Editing formulas: Subtotal = SUM(P19:P30); Tax = Subtotal*0.13; Grand Total = Subtotal+Tax
+Editing formulas:
+
+Subtotal = SUM(P19:P30)
+
+Tax = Subtotal * 0.13
+
+Grand Total = Subtotal + Tax
 
 Accessing Developer tools: Alt + F11 or Developer tab → Visual Basic
 
 Feel free to tweak the VBA code as needed.
-
-Thank you!
