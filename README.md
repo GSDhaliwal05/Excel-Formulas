@@ -181,7 +181,7 @@ Copy code
 | Product C|
 | Product D|
 +---------+
-Notes / Tips for Beginners
+#Notes / Tips for Beginners
 Enable macros for automation: click Enable Content when opening .xlsm file.
 
 Always save as Excel Macro-Enabled Workbook (.xlsm)
