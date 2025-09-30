@@ -3,7 +3,7 @@
 
 ## 🧾 Overview
 
-This project walks you through building a dynamic invoice system in Microsoft Excel using formulas, dropdowns, and VBA macros. It’s designed for beginners who want to automate calculations, manage products from a separate sheet, and convert quantities from kilograms to pounds. Make sure to view the releases for the latest code For this Project
+This project walks you through building a dynamic invoice system in Microsoft Excel using formulas, dropdowns, and VBA macros. It’s designed for beginners who want to automate calculations, manage products from a separate sheet, and convert quantities from kilograms to pounds. Make sure to view the releases for the latest code For this Project!
 
 ---
 
